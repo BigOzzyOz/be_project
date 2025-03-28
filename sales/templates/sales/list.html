@@ -1,0 +1,7 @@
+<ul>
+  {% for customer in customers %}
+    <li>{{ customer.last_name|default:'' }}, {{ customer.first_name|default:'' }}</li>
+  {% empty %}
+    <li>No Customer found.</li>
+  {% endfor %}
+</ul>
